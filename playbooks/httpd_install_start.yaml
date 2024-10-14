@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: class
   become: true
   gather_facts: true
   tasks:
