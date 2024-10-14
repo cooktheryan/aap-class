@@ -1,0 +1,15 @@
+---
+- hosts: web
+  become: true
+  gather_facts: true
+  tasks:
+  - name: install httpd
+    package:
+     name: httpd
+     state: latest
+
+  - name: start httpd
+    service:
+      name: httpd
+      state: started
+      enabled: true
