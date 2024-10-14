@@ -1,5 +1,5 @@
 ---
-- hosts: class
+- hosts: all
   become: true
   gather_facts: true
   tasks:
