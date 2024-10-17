@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+  - name: install mariadb-server
+    package:
+      name: mariadb-server
+      state: latest
+
+  - name: service start
+    service:
+      name: mysqld-server
+      state: started
+      enabled: true
